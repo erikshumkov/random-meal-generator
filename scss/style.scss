@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    margin-bottom: 0;
+    font-size: 2.1rem;
+  }
+  p {
+    margin-top: 18px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    background: rgb(169, 47, 194);
+    padding: 12px 45px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.7rem;
+    outline: 0;
+    &:hover {
+      background: rgb(190, 55, 218);
+    }
+  }
+}
+
+#meal {
+  margin-top: 20px;
+  padding: 0 0 100px;
+  .wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    column-gap: 35px;
+    .image {
+      img {
+        max-width: 100%;
+      }
+      p {
+        .bold {
+          font-weight: bold;
+        }
+      }
+    }
+    .instructions {
+      h4 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+      }
+      p {
+        line-height: 1.7;
+      }
+    }
+  }
+
+  .ingredients {
+    margin-top: 20px;
+    h5 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    ul {
+      padding-left: 16px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.container.adjustheight {
+  height: 25vh;
+}
