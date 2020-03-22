@@ -22,8 +22,6 @@ const html = (instructions) => {
     }
   }
 
-  console.log(instructions.strTags)
-
   return showMeal.innerHTML = `
   <div class="wrapper">
         <div class="grid">
@@ -56,7 +54,6 @@ generateBtn.addEventListener("click", () => {
   container.classList.add("adjustheight");
   getRandomMeal()
     .then(res => {
-      console.log(res.meals[0]);
       html(res.meals[0]);
     });
 });
