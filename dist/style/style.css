@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
 * {
   box-sizing: border-box; }
 
+.colors {
+  color: #979797;
+  color: #2a3235; }
+
 body {
-  font-family: 'Muli', sans-serif; }
+  font-family: 'Muli', sans-serif;
+  padding: 0;
+  margin: 0; }
 
 .container {
   height: 70vh;
@@ -21,7 +28,7 @@ body {
   .container a {
     text-decoration: none;
     color: #fff;
-    background: #a92fc2;
+    background: #2a3235;
     padding: 12px 45px;
     border-radius: 5px;
     text-transform: uppercase;
@@ -29,7 +36,7 @@ body {
     font-size: 0.7rem;
     outline: 0; }
     .container a:hover {
-      background: #be37da; }
+      background: #202629; }
 
 #meal {
   margin-top: 20px;
@@ -37,29 +44,53 @@ body {
   #meal .wrapper {
     max-width: 1000px;
     margin: 0 auto; }
+  #meal h4 {
+    font-family: 'Playfair Display', serif;
+    text-transform: capitalize;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin: 50px 0;
+    font-size: 3rem; }
   #meal .grid {
     display: grid;
     grid-template-columns: 40% 1fr;
-    column-gap: 35px; }
+    column-gap: 55px; }
     #meal .grid .image img {
       max-width: 100%; }
-    #meal .grid .image p .bold {
+    #meal .grid .image p {
+      font-size: 1.1rem;
+      letter-spacing: 1px;
       font-weight: bold; }
-    #meal .grid .instructions h4 {
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 1.8rem; }
-    #meal .grid .instructions p {
-      line-height: 1.7; }
-  #meal .ingredients {
-    margin-top: 20px; }
-    #meal .ingredients h5 {
-      font-size: 1.5rem;
-      margin: 0; }
-    #meal .ingredients ul {
-      padding-left: 16px; }
-      #meal .ingredients ul li {
-        margin-bottom: 5px; }
+      #meal .grid .image p .bold {
+        color: #8a8e91;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 2px; }
+    #meal .grid .ingredients {
+      margin-top: 0; }
+      #meal .grid .ingredients h5 {
+        color: #979797;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 0; }
+      #meal .grid .ingredients ul {
+        list-style: none;
+        padding-left: 0; }
+        #meal .grid .ingredients ul li {
+          margin-bottom: 20px;
+          font-size: 1.1rem; }
+  #meal .instructions {
+    max-width: 70%; }
+    #meal .instructions h5 {
+      color: #979797;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 20px 0 0; }
+    #meal .instructions p {
+      line-height: 1.7;
+      font-size: 1.2rem; }
 
 .container.adjustheight {
   height: 25vh; }

@@ -16,16 +16,15 @@ const html = (instructions) => {
 
   for (let i = 1; i <= 20; i++) {
     if (instructions[`strIngredient${i}`]) {
-      ingredients.push(`${instructions[`strIngredient${i}`]} - ${instructions[`strMeasure${i}`]}`);
+      ingredients.push(`${instructions[`strMeasure${i}`]} - ${instructions[`strIngredient${i}`]}`);
     } else {
       break;
     }
   }
 
-  console.log(instructions.strTags)
-
   return showMeal.innerHTML = `
   <div class="wrapper">
+    <h4>${instructions.strMeal}</h4>
         <div class="grid">
           <div class="image">
             <img src="${instructions.strMealThumb}" alt="Image of a meal">
@@ -34,19 +33,20 @@ const html = (instructions) => {
 
             ${instructions.strTags !== null && instructions.strTags !== "" ? `<p class="tags"><span class="bold">Tags:</span> ${instructions.strTags.split(',').join(', ')}</p>` : ""}            
           </div >
-  <div class="instructions">
-    <h4>${instructions.strMeal}</h4>
-    <p>
-      ${instructions.strInstructions}
-    </p>
-  </div>
+
+          <div class="ingredients">
+            <h5>Ingredients</h5>
+            <ul>
+              ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}
+            </ul>
+          </div>
         </div >
-  <div class="ingredients">
-    <h5>Ingredients</h5>
-    <ul>
-      ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}
-    </ul>
-  </div>
+        <div class="instructions">
+          <h5>Method</h5>
+          <p>
+            ${instructions.strInstructions}
+          </p>
+      </div>
       </div >
   `;
 }

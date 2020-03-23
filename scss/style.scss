@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
+.colors {
+  color: #979797;
+  color: #2a3235; // btn
+}
+
 body {
   font-family: 'Muli', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
@@ -26,7 +35,7 @@ body {
   a {
     text-decoration: none;
     color: #fff;
-    background: rgb(169, 47, 194);
+    background: #2a3235;
     padding: 12px 45px;
     border-radius: 5px;
     text-transform: uppercase;
@@ -34,7 +43,7 @@ body {
     font-size: 0.7rem;
     outline: 0;
     &:hover {
-      background: rgb(190, 55, 218);
+      background: rgb(32, 38, 41);
     }
   }
 }
@@ -46,43 +55,66 @@ body {
     max-width: 1000px;
     margin: 0 auto;
   }
+  h4 {
+    font-family: 'Playfair Display', serif;
+    text-transform: capitalize;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin: 50px 0;
+    font-size: 3rem;
+  }
   .grid {
     display: grid;
     grid-template-columns: 40% 1fr;
-    column-gap: 35px;
+    column-gap: 55px;
     .image {
       img {
         max-width: 100%;
       }
       p {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        font-weight: bold;
         .bold {
-          font-weight: bold;
+          color: #8a8e91;
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          letter-spacing: 2px;
         }
       }
     }
-    .instructions {
-      h4 {
-        margin-top: 0;
-        margin-bottom: 20px;
-        font-size: 1.8rem;
+    .ingredients {
+      margin-top: 0;
+      h5 {
+        color: #979797;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 0;
       }
-      p {
-        line-height: 1.7;
+      ul {
+        list-style: none;
+        padding-left: 0;
+        li {
+          margin-bottom: 20px;
+          font-size: 1.1rem;
+        }
       }
     }
   }
 
-  .ingredients {
-    margin-top: 20px;
+  .instructions {
+    max-width: 70%;
     h5 {
-      font-size: 1.5rem;
-      margin: 0;
+      color: #979797;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 20px 0 0;
     }
-    ul {
-      padding-left: 16px;
-      li {
-        margin-bottom: 5px;
-      }
+    p {
+      line-height: 1.7;
+      font-size: 1.2rem;
     }
   }
 }
