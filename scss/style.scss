@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -9,12 +11,14 @@
 .colors {
   color: #979797;
   color: #2a3235; // btn
+  color: #242829; // black
 }
 
 body {
   font-family: 'Muli', sans-serif;
   padding: 0;
   margin: 0;
+  position: relative;
 }
 
 .container {
@@ -26,22 +30,25 @@ body {
   h2 {
     margin-bottom: 0;
     font-size: 2.1rem;
+    color: #242829;
   }
   p {
     margin-top: 18px;
     margin-bottom: 15px;
     font-size: 1.4rem;
+    color: #242829;
   }
   a {
     text-decoration: none;
     color: #fff;
     background: #2a3235;
-    padding: 12px 45px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.7rem;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-size: 1.1rem;
     outline: 0;
+    .arrow {
+      margin-left: 15px;
+    }
     &:hover {
       background: rgb(32, 38, 41);
     }
@@ -51,6 +58,7 @@ body {
 #meal {
   margin-top: 20px;
   padding: 0 0 100px;
+  color: #242829;
   .wrapper {
     max-width: 1000px;
     margin: 0 auto;
@@ -121,4 +129,30 @@ body {
 
 .container.adjustheight {
   height: 25vh;
+  h2 {
+    display: none;
+  }
+  p {
+    visibility: hidden;
+  }
+}
+
+.top-btn {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  text-decoration: none;
+  color: #fff;
+  background: #2a3235;
+  padding: 7px 18px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  outline: 0;
+  .arrow {
+    display: block;
+    padding: 0 0 5px 1px;
+  }
+  &:hover {
+    background: rgb(32, 38, 41);
+  }
 }
