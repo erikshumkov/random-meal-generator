@@ -54,9 +54,10 @@ const html = (instructions) => {
 // Event Listener
 generateBtn.addEventListener("click", () => {
   container.classList.add("adjustheight");
+  const str = `Get new meal <span class="arrow">&#8594;</span>`
+  generateBtn.innerHTML = str;
   getRandomMeal()
     .then(res => {
-      console.log(res.meals[0]);
       html(res.meals[0]);
     });
 });
