@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const containerWrapper = container.querySelector(".wrapper");
 const generateBtn = container.querySelector("a");
 const showMeal = document.getElementById("meal");
 
@@ -22,9 +23,14 @@ const html = (instructions) => {
     }
   }
 
+  containerWrapper.innerHTML = `
+  <a href="#" class="generate-btn"
+          >Get new meal <span class="arrow">&#8594;</span></a
+        >
+  <h1>${instructions.strMeal}</h1>`;
+
   return showMeal.innerHTML = `
   <div class="wrapper">
-    <h4>${instructions.strMeal}</h4>
         <div class="grid">
           <div class="image">
             <img src="${instructions.strMealThumb}" alt="Image of a meal">
@@ -54,10 +60,11 @@ const html = (instructions) => {
 // Event Listener
 generateBtn.addEventListener("click", () => {
   container.classList.add("adjustheight");
-  const str = `Get new meal <span class="arrow">&#8594;</span>`
-  generateBtn.innerHTML = str;
   getRandomMeal()
     .then(res => {
       html(res.meals[0]);
-    });
+    })
+    .catch(error => {
+      console.log(`Something went wrong. Error message = ${error}`)
+    })
 });

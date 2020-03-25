@@ -23,34 +23,47 @@ body {
 
 .container {
   height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h2 {
-    margin-bottom: 0;
-    font-size: 2.1rem;
-    color: #242829;
-  }
-  p {
-    margin-top: 18px;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-    color: #242829;
-  }
-  a {
-    text-decoration: none;
-    color: #fff;
-    background: #2a3235;
-    padding: 12px 35px;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    outline: 0;
-    .arrow {
-      margin-left: 15px;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    h2 {
+      margin-bottom: 0;
+      font-size: 2.1rem;
+      color: #242829;
     }
-    &:hover {
-      background: rgb(32, 38, 41);
+    p {
+      margin-top: 18px;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+      color: #242829;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      background: #2a3235;
+      padding: 12px 35px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      outline: 0;
+      .arrow {
+        margin-left: 15px;
+      }
+      &:hover {
+        background: rgb(32, 38, 41);
+      }
+    }
+    h1 {
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      text-transform: capitalize;
+      font-weight: lighter;
+      letter-spacing: 1px;
+      margin: 50px 0;
+      font-size: 3rem;
     }
   }
 }
@@ -60,16 +73,10 @@ body {
   padding: 0 0 100px;
   color: #242829;
   .wrapper {
+    background: #fff;
     max-width: 1000px;
-    margin: 0 auto;
-  }
-  h4 {
-    font-family: 'Playfair Display', serif;
-    text-transform: capitalize;
-    font-weight: lighter;
-    letter-spacing: 1px;
-    margin: 50px 0;
-    font-size: 3rem;
+    margin: -90px auto 0 auto;
+    z-index: 10;
   }
   .grid {
     display: grid;
@@ -128,7 +135,10 @@ body {
 }
 
 .container.adjustheight {
-  height: 25vh;
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+    url('../img/cook.jpg') no-repeat center center;
+  background-size: cover;
   h2 {
     display: none;
   }

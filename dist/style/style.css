@@ -16,47 +16,53 @@ body {
   position: relative; }
 
 .container {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .container h2 {
-    margin-bottom: 0;
-    font-size: 2.1rem;
-    color: #242829; }
-  .container p {
-    margin-top: 18px;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-    color: #242829; }
-  .container a {
-    text-decoration: none;
-    color: #fff;
-    background: #2a3235;
-    padding: 12px 35px;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    outline: 0; }
-    .container a .arrow {
-      margin-left: 15px; }
-    .container a:hover {
-      background: #202629; }
+  height: 70vh; }
+  .container .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto; }
+    .container .wrapper h2 {
+      margin-bottom: 0;
+      font-size: 2.1rem;
+      color: #242829; }
+    .container .wrapper p {
+      margin-top: 18px;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+      color: #242829; }
+    .container .wrapper a {
+      text-decoration: none;
+      color: #fff;
+      background: #2a3235;
+      padding: 12px 35px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      outline: 0; }
+      .container .wrapper a .arrow {
+        margin-left: 15px; }
+      .container .wrapper a:hover {
+        background: #202629; }
+    .container .wrapper h1 {
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      text-transform: capitalize;
+      font-weight: lighter;
+      letter-spacing: 1px;
+      margin: 50px 0;
+      font-size: 3rem; }
 
 #meal {
   margin-top: 20px;
   padding: 0 0 100px;
   color: #242829; }
   #meal .wrapper {
+    background: #fff;
     max-width: 1000px;
-    margin: 0 auto; }
-  #meal h4 {
-    font-family: 'Playfair Display', serif;
-    text-transform: capitalize;
-    font-weight: lighter;
-    letter-spacing: 1px;
-    margin: 50px 0;
-    font-size: 3rem; }
+    margin: -90px auto 0 auto;
+    z-index: 10; }
   #meal .grid {
     display: grid;
     grid-template-columns: 40% 1fr;
@@ -99,7 +105,9 @@ body {
       font-size: 1.2rem; }
 
 .container.adjustheight {
-  height: 25vh; }
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../img/cook.jpg") no-repeat center center;
+  background-size: cover; }
   .container.adjustheight h2 {
     display: none; }
   .container.adjustheight p {
