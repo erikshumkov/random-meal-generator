@@ -7,7 +7,8 @@
 .colors {
   color: #979797;
   color: #2a3235;
-  color: #242829; }
+  color: #242829;
+  color: #202528; }
 
 body {
   font-family: 'Muli', sans-serif;
@@ -16,47 +17,62 @@ body {
   position: relative; }
 
 .container {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .container h2 {
-    margin-bottom: 0;
-    font-size: 2.1rem;
-    color: #242829; }
-  .container p {
-    margin-top: 18px;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-    color: #242829; }
-  .container a {
-    text-decoration: none;
-    color: #fff;
-    background: #2a3235;
-    padding: 12px 35px;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    outline: 0; }
-    .container a .arrow {
-      margin-left: 15px; }
-    .container a:hover {
-      background: #202629; }
+  height: 70vh; }
+  .container .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 50vh; }
+    .container .wrapper h2 {
+      margin-bottom: 0;
+      font-size: 2.1rem;
+      color: #242829; }
+    .container .wrapper p {
+      margin-top: 18px;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+      color: #242829; }
+    .container .wrapper a {
+      text-decoration: none;
+      color: #fff;
+      background: #2a3235;
+      padding: 12px 35px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      outline: 0; }
+      .container .wrapper a .arrow {
+        margin-left: 15px;
+        pointer-events: none; }
+      .container .wrapper a:hover {
+        background: #202629; }
+    .container .wrapper h1 {
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      text-transform: capitalize;
+      font-weight: lighter;
+      letter-spacing: 1px;
+      margin: 50px 0;
+      font-size: 3rem;
+      line-height: 1; }
 
 #meal {
-  margin-top: 20px;
+  position: relative;
   padding: 0 0 100px;
-  color: #242829; }
+  color: #242829;
+  background: #fff; }
   #meal .wrapper {
-    max-width: 1000px;
-    margin: 0 auto; }
-  #meal h4 {
-    font-family: 'Playfair Display', serif;
-    text-transform: capitalize;
-    font-weight: lighter;
-    letter-spacing: 1px;
-    margin: 50px 0;
-    font-size: 3rem; }
+    position: absolute;
+    background: #fff;
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+    left: 0;
+    right: 0;
+    top: -65px;
+    z-index: 10;
+    padding: 25px 40px; }
   #meal .grid {
     display: grid;
     grid-template-columns: 40% 1fr;
@@ -99,11 +115,30 @@ body {
       font-size: 1.2rem; }
 
 .container.adjustheight {
-  height: 25vh; }
+  height: 50vh;
+  padding-top: 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("../img/food.jpg") no-repeat center center;
+  background-size: cover; }
   .container.adjustheight h2 {
     display: none; }
   .container.adjustheight p {
     visibility: hidden; }
+  .container.adjustheight .wrapper {
+    align-items: inherit;
+    height: initial; }
+    .container.adjustheight .wrapper h1 {
+      text-align: left; }
+    .container.adjustheight .wrapper a {
+      width: 220px;
+      background: #fff;
+      color: #202629;
+      margin: 0 auto; }
+
+#meal.adjustheight {
+  height: 200vh;
+  background: #fff; }
+  #meal.adjustheight .wrapper {
+    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.3); }
 
 .top-btn {
   position: absolute;
