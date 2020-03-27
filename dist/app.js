@@ -58,13 +58,16 @@ const html = (instructions) => {
 }
 
 // Event Listener
-generateBtn.addEventListener("click", () => {
-  container.classList.add("adjustheight");
-  getRandomMeal()
-    .then(res => {
-      html(res.meals[0]);
-    })
-    .catch(error => {
-      console.log(`Something went wrong. Error message = ${error}`)
-    })
+container.addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
+    container.classList.add("adjustheight");
+    meal.classList.add("adjustheight");
+    getRandomMeal()
+      .then(res => {
+        html(res.meals[0]);
+      })
+      .catch(error => {
+        console.log(`Something went wrong. Error message = ${error}`)
+      });
+  }
 });
